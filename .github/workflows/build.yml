@@ -1,0 +1,15 @@
+name: Update check
+on:
+  push:
+  schedule:
+    - cron: '40 */3 * * *'
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - run: ./update-formula
