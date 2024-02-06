@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Formula to install the script: tmstatus.sh
-class TmStatusSh < Formula
+class TmstatusSh < Formula
   desc 'Simple script to summarise the Time Machine backup status'
   homepage 'https://github.com/matteocorti/tmstatus.sh'
   url 'https://github.com/matteocorti/tmstatus.sh/releases/download/v1.21.0/tmstatus.sh-1.21.0.tar.bz2'
